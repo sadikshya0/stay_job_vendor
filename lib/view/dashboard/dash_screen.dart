@@ -110,8 +110,8 @@ class CustomBottomBar extends StatelessWidget {
           children: [
             AnimatedContainer(
               duration: const Duration(milliseconds: 250),
-              height: isActive ? 40 : 38,
-              width: isActive ? 40 : 38,
+              height: isActive ? 42 : 40,
+              width: isActive ? 42 : 40,
               child: SvgPicture.asset(
                 svgPath,
                 color: isActive

@@ -38,7 +38,7 @@ class VerificationCard extends StatelessWidget {
             height: 40,
             width: 40,
             decoration: BoxDecoration(
-              color: iconBgColor,
+              color: AppColors.primaryColor,
               borderRadius: BorderRadius.circular(10),
             ),
 

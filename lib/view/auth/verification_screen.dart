@@ -13,60 +13,70 @@ class VerificationScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
       appBar: AppBar(
-        title: Text(
-          "Account Verification",
-          style: CustomTextStyles.f20W600(color: AppColors.primaryColor),
+        title: Center(
+          child: Text(
+            "Account Verification",
+            style: CustomTextStyles.f20W600(color: AppColors.primaryColor),
+          ),
         ),
         elevation: 4,
         backgroundColor: AppColors.whiteColor,
       ),
       body: SafeArea(
-        child: Column(
-          children: [
-            Container(
-              height: 126,
-              width: 113,
-              decoration: BoxDecoration(
-                color: AppColors.primaryColor,
-                shape: BoxShape.circle,
-              ),
-              child: Icon(Icons.verified_user, color: Colors.amber),
-            ),
-            Text(
-              "Verify your identity",
-              style: CustomTextStyles.f16W600(color: AppColors.textColor),
-            ),
-            Text(
-              "Verification help us maintain a safe community. Verified Vendors Get a badge and priority listing and placement",
-              style: CustomTextStyles.f14W400(color: AppColors.textColor),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(height: 30),
-            VerificationCard(
-              icon: Icons.file_present,
-              title: "Government ID",
-              subtitle: "Password or driver's License",
-            ),
-            SizedBox(height: 30),
-            VerificationCard(
-              icon: Icons.smartphone,
-              title: "Selfie Check",
-              subtitle: "Quick Facial Recognition Scan",
-            ),
-            SizedBox(height: 30),
-            InkWell(
-              onTap: () {
-                Get.offAll(() => VerifiedScreen());
-              },
-              child: Container(
-                height: 45,
-                width: double.infinity,
+        child: Padding(
+          padding: const EdgeInsets.only(top: 50, left: 20, right: 20),
+          child: Column(
+            children: [
+              Container(
+                height: 126,
+                width: 113,
                 decoration: BoxDecoration(
                   color: AppColors.primaryColor,
-                  borderRadius: BorderRadius.circular(10),
+                  shape: BoxShape.circle,
                 ),
-                child: Center(
+                child: Icon(Icons.verified_user, color: Colors.amber, size: 80),
+              ),
+              SizedBox(height: 10),
+
+              Text(
+                "Verify your identity",
+                style: CustomTextStyles.f16W600(color: AppColors.textColor),
+              ),
+              SizedBox(height: 5),
+
+              Text(
+                "Verification help us maintain a safe community. Verified Vendors Get a badge and priority listing and placement",
+                style: CustomTextStyles.f14W600(
+                  color: AppColors.secondaryTextColor,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 30),
+              VerificationCard(
+                icon: Icons.file_present,
+                title: "Government ID",
+                subtitle: "Password or driver's License",
+              ),
+              SizedBox(height: 30),
+              VerificationCard(
+                icon: Icons.smartphone,
+                title: "Selfie Check",
+                subtitle: "Quick Facial Recognition Scan",
+              ),
+              SizedBox(height: 50),
+              InkWell(
+                onTap: () {
+                  Get.offAll(() => VerifiedScreen());
+                },
+                child: Container(
+                  height: 45,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: AppColors.primaryColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(
                         Icons.upload_sharp,
@@ -84,8 +94,8 @@ class VerificationScreen extends StatelessWidget {
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
