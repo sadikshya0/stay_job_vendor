@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:get/get_utils/src/get_utils/get_utils.dart';
 
 class Validators {
   static String? checkFieldEmpty(String? fieldContent) {

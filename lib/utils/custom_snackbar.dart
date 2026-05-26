@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:safe_job/utils/colors.dart';
+import 'package:stay_job_vendor/utils/colors.dart';
 
 class CustomSnackBar {
   static void success({String? title, String? message}) {
