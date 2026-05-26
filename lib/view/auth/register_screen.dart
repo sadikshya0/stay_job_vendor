@@ -6,6 +6,7 @@ import 'package:stay_job_vendor/utils/custom_text_styles.dart';
 import 'package:stay_job_vendor/utils/image_path.dart';
 import 'package:stay_job_vendor/utils/validator.dart';
 import 'package:stay_job_vendor/view/auth/login_screen.dart';
+import 'package:stay_job_vendor/view/auth/verification_screen.dart';
 import 'package:stay_job_vendor/widgets/custom/custom_pasword.dart';
 import 'package:stay_job_vendor/widgets/custom/custom_textfield.dart';
 import 'package:stay_job_vendor/widgets/custom/elevated_button.dart';
@@ -133,7 +134,7 @@ class RegisterScreen extends StatelessWidget {
                 CustomElevatedButton(
                   title: "Create Account",
                   onTap: () {
-                    Get.offAll(() => ());
+                    Get.offAll(() => VerificationScreen());
                   },
                 ),
 

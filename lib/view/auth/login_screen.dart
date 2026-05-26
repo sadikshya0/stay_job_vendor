@@ -8,6 +8,7 @@ import 'package:stay_job_vendor/utils/custom_text_styles.dart';
 import 'package:stay_job_vendor/utils/image_path.dart';
 import 'package:stay_job_vendor/utils/validator.dart';
 import 'package:stay_job_vendor/view/auth/register_screen.dart';
+import 'package:stay_job_vendor/view/dashboard/dash_screen.dart';
 import 'package:stay_job_vendor/widgets/custom/custom_pasword.dart';
 import 'package:stay_job_vendor/widgets/custom/custom_textfield.dart';
 import 'package:stay_job_vendor/widgets/custom/elevated_button.dart';
@@ -110,7 +111,7 @@ class LoginScreen extends StatelessWidget {
                 CustomElevatedButton(
                   title: "Login",
                   onTap: () {
-                    Get.offAll(() => ());
+                    Get.offAll(() => DashScreen());
                   },
                 ),
 
