@@ -13,12 +13,6 @@ class ImagePath {
   static const String schedule = "$baseIconPath/schedule.svg";
 
   static const String logo = "$baseImagePath/logo.png";
-  static const String job = "$baseImagePath/job.png";
-  static const String room = "$baseImagePath/room.png";
-  static const String sync = "$baseImagePath/sync.png";
-  static const String building = "$baseImagePath/building.png";
   static const String flat = "$baseImagePath/flat.png";
-  static const String bedroom = "$baseImagePath/bedroom.png";
-  static const String map = "$baseImagePath/map.png";
   static const String person = "$baseImagePath/profile.png";
 }
