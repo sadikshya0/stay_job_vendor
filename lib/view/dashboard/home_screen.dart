@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/state_manager.dart';
 import 'package:stay_job_vendor/utils/colors.dart';
 import 'package:stay_job_vendor/utils/custom_text_styles.dart';
 import 'package:stay_job_vendor/utils/image_path.dart';
+import 'package:stay_job_vendor/view/dashboard/activity_listing_screen.dart';
 import 'package:stay_job_vendor/widgets/home_screen_widget/flat_card.dart';
 import 'package:stay_job_vendor/widgets/home_screen_widget/message_card.dart';
 import 'package:stay_job_vendor/widgets/home_screen_widget/stat_card.dart';
@@ -369,18 +372,23 @@ class HomeScreen extends StatelessWidget {
                         color: AppColors.secondaryTextColor,
                       ),
                     ),
-                    Container(
-                      height: 18,
-                      width: 55,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: AppColors.primaryColor),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Add New",
-                          style: CustomTextStyles.f10W600(
-                            color: AppColors.primaryColor,
+                    InkWell(
+                      onTap: () {
+                        Get.to(() => ActivityListingScreen());
+                      },
+                      child: Container(
+                        height: 18,
+                        width: 55,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: AppColors.primaryColor),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Add New",
+                            style: CustomTextStyles.f10W600(
+                              color: AppColors.primaryColor,
+                            ),
                           ),
                         ),
                       ),
