@@ -39,46 +39,42 @@ class DashScreen extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                children: [
-                  Obx(
-                    () => CustomBottomBar(
-                      svgPath: ImagePath.home,
-                      isActive: c.currentIndex.value == 0,
-                      onTap: () => c.currentIndex.value = 0,
-                    ),
-                  ),
-                  Obx(
-                    () => CustomBottomBar(
-                      svgPath: ImagePath.chat,
+              Obx(
+                () => CustomBottomBar(
+                  svgPath: ImagePath.home,
+                  isActive: c.currentIndex.value == 0,
+                  onTap: () => c.currentIndex.value = 0,
+                ),
+              ),
+              Obx(
+                () => CustomBottomBar(
+                  svgPath: ImagePath.chat,
 
-                      isActive: c.currentIndex.value == 1,
-                      onTap: () => c.currentIndex.value = 1,
-                    ),
-                  ),
-                  CustomBottomBar(
-                    svgPath: ImagePath.switched,
-                    isActive: false,
-                    onTap: () {
-                      showSwitchIdentityDialog();
-                    },
-                  ),
+                  isActive: c.currentIndex.value == 1,
+                  onTap: () => c.currentIndex.value = 1,
+                ),
+              ),
+              CustomBottomBar(
+                svgPath: ImagePath.switched,
+                isActive: false,
+                onTap: () {
+                  showSwitchIdentityDialog();
+                },
+              ),
 
-                  Obx(
-                    () => CustomBottomBar(
-                      svgPath: ImagePath.schedule,
-                      isActive: c.currentIndex.value == 3,
-                      onTap: () => c.currentIndex.value = 3,
-                    ),
-                  ),
-                  Obx(
-                    () => CustomBottomBar(
-                      svgPath: ImagePath.profile,
-                      isActive: c.currentIndex.value == 4,
-                      onTap: () => c.currentIndex.value = 4,
-                    ),
-                  ),
-                ],
+              Obx(
+                () => CustomBottomBar(
+                  svgPath: ImagePath.schedule,
+                  isActive: c.currentIndex.value == 3,
+                  onTap: () => c.currentIndex.value = 3,
+                ),
+              ),
+              Obx(
+                () => CustomBottomBar(
+                  svgPath: ImagePath.profile,
+                  isActive: c.currentIndex.value == 4,
+                  onTap: () => c.currentIndex.value = 4,
+                ),
               ),
             ],
           ),
