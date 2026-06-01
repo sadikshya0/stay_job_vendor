@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:stay_job_vendor/controller/dashboard/dash_screen_controller.dart';
+import 'package:stay_job_vendor/controller/employer_dashboard/employer_dash_screen_controller.dart';
 import 'package:stay_job_vendor/utils/colors.dart';
 import 'package:stay_job_vendor/utils/image_path.dart';
 import 'package:stay_job_vendor/widgets/custom/custom_bottom_bar.dart';
 import 'package:stay_job_vendor/widgets/custom/switch_identity_dialog.dart';
 
-class DashScreen extends StatelessWidget {
-  final c = Get.put(DashScreenController());
-  DashScreen({super.key});
+class EmployerDashScreen extends StatelessWidget {
+  final c = Get.put(EmployerDashScreenController());
+  EmployerDashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -66,16 +66,9 @@ class DashScreen extends StatelessWidget {
 
                   Obx(
                     () => CustomBottomBar(
-                      svgPath: ImagePath.schedule,
+                      svgPath: ImagePath.profile,
                       isActive: c.currentIndex.value == 3,
                       onTap: () => c.currentIndex.value = 3,
-                    ),
-                  ),
-                  Obx(
-                    () => CustomBottomBar(
-                      svgPath: ImagePath.profile,
-                      isActive: c.currentIndex.value == 4,
-                      onTap: () => c.currentIndex.value = 4,
                     ),
                   ),
                 ],
