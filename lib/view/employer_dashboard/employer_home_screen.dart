@@ -90,7 +90,7 @@ class EmployerHomeScreen extends StatelessWidget {
                     ),
 
                     child: Text(
-                      "Landlord",
+                      "Employer",
                       style: CustomTextStyles.f12W600(
                         color: AppColors.textColor,
                       ),
@@ -329,6 +329,94 @@ class EmployerHomeScreen extends StatelessWidget {
                   salary: "NPR 20K/month",
                   applicants: "20 applicants",
                   imagePath: ImagePath.person,
+                ),
+                SizedBox(height: 20),
+                Container(
+                  height: 170,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: AppColors.lGrey,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "UPCOMING INTERVIEWS",
+                                style: CustomTextStyles.f14W600(
+                                  color: AppColors.primaryColor,
+                                ),
+                              ),
+                              Icon(
+                                Icons.calendar_month_outlined,
+                                size: 28,
+                                color: AppColors.primaryColor,
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 20),
+                          Container(
+                            height: 65,
+                            width: 310,
+                            decoration: BoxDecoration(
+                              color: AppColors.whiteColor,
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    height: 32,
+                                    width: 32,
+                                    decoration: BoxDecoration(
+                                      color: AppColors.primaryColor,
+                                      borderRadius: BorderRadius.circular(6),
+                                    ),
+                                    child: Center(
+                                      child: Text(
+                                        textAlign: TextAlign.center,
+                                        "Mar 25",
+                                        style: CustomTextStyles.f12W600(
+                                          color: AppColors.whiteColor,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(width: 12),
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Sarah. Jenkins",
+                                        style: CustomTextStyles.f14W600(
+                                          color: AppColors.textColor,
+                                        ),
+                                      ),
+                                      SizedBox(height: 4),
+                                      Text(
+                                        "10:00 AM . Interview: Senior Frontend Developer",
+                                        style: CustomTextStyles.f10W600(
+                                          color: AppColors.secondaryTextColor,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
