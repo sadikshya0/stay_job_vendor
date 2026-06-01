@@ -45,6 +45,8 @@ void showSwitchIdentityDialog() {
                   ),
                 ),
                 onPressed: () {
+                  Get.back();
+
                   Get.offAll(() => EmployerDashScreen());
                 },
                 child: const Text(
