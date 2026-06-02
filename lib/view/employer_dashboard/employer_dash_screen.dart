@@ -58,7 +58,7 @@ class EmployerDashScreen extends StatelessWidget {
                 svgPath: ImagePath.switched,
                 isActive: false,
                 onTap: () {
-                  showSwitchIdentityDialog();
+                  showSwitchIdentityDialog("employer");
                 },
               ),
 

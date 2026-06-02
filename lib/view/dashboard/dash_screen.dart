@@ -58,7 +58,7 @@ class DashScreen extends StatelessWidget {
                 svgPath: ImagePath.switched,
                 isActive: false,
                 onTap: () {
-                  showSwitchIdentityDialog();
+                  showSwitchIdentityDialog("landlord");
                 },
               ),
 

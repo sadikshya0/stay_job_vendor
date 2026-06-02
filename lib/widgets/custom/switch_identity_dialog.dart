@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:stay_job_vendor/utils/colors.dart';
+import 'package:stay_job_vendor/utils/custom_text_styles.dart';
+import 'package:stay_job_vendor/view/dashboard/dash_screen.dart';
 import 'package:stay_job_vendor/view/employer_dashboard/employer_dash_screen.dart';
 
-void showSwitchIdentityDialog() {
+void showSwitchIdentityDialog(String currentRole) {
   Get.dialog(
     Dialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
@@ -11,29 +14,26 @@ void showSwitchIdentityDialog() {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            /// ICON
             Icon(Icons.apartment, size: 70, color: Colors.indigo.shade900),
 
-            const SizedBox(height: 12),
+            SizedBox(height: 12),
 
-            /// TITLE
-            const Text(
+            Text(
               "Switch Identity?",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+              style: CustomTextStyles.f20W600(color: AppColors.textColor),
             ),
 
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
 
-            /// MESSAGE
-            const Text(
-              "Are sure you want to switch to Landlord dashboard ?",
+            Text(
+              currentRole == 'employer'
+                  ? "Switch to Landlord dashboard?"
+                  : "Switch to Employer dashboard?",
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 14),
             ),
 
-            const SizedBox(height: 24),
+            SizedBox(height: 24),
 
-            /// SWITCH BUTTON
             SizedBox(
               width: double.infinity,
               height: 45,
@@ -47,40 +47,27 @@ void showSwitchIdentityDialog() {
                 onPressed: () {
                   Get.back();
 
-                  Get.offAll(() => EmployerDashScreen());
+                  if (currentRole == 'employer') {
+                    Get.offAll(() => DashScreen()); // landlord
+                  } else {
+                    Get.offAll(() => EmployerDashScreen()); // employer
+                  }
                 },
-                child: const Text(
+                child: Text(
                   "Yes, Switch Now",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: CustomTextStyles.f16W600(color: AppColors.whiteColor),
                 ),
               ),
             ),
 
-            const SizedBox(height: 12),
+            SizedBox(height: 12),
 
-            /// CANCEL BUTTON
-            SizedBox(
-              width: double.infinity,
-              height: 45,
-              child: OutlinedButton(
-                style: OutlinedButton.styleFrom(
-                  side: BorderSide(color: Colors.grey.shade400),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                ),
-                onPressed: () {
-                  Get.back();
-                },
-                child: const Text(
-                  "Cancel",
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontWeight: FontWeight.w600,
-                  ),
+            OutlinedButton(
+              onPressed: () => Get.back(),
+              child: Text(
+                "Cancel",
+                style: CustomTextStyles.f16W600(
+                  color: AppColors.secondaryTextColor,
                 ),
               ),
             ),
