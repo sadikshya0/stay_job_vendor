@@ -1,7 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:stay_job_vendor/controller/dashboard/post_screen_controller.dart';
 import 'package:stay_job_vendor/utils/colors.dart';
 import 'package:stay_job_vendor/utils/custom_text_styles.dart';
@@ -20,7 +19,12 @@ class PostScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.onBackgroundDark,
 
-        leading: InkWell(onTap: () {}, child: Icon(Icons.arrow_back)),
+        leading: InkWell(
+          onTap: () {
+            Get.back();
+          },
+          child: Icon(Icons.arrow_back),
+        ),
         title: Text(
           "Listing a Room",
           style: CustomTextStyles.f20W600(color: AppColors.primaryColor),

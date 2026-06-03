@@ -4,6 +4,7 @@ import 'package:stay_job_vendor/utils/colors.dart';
 import 'package:stay_job_vendor/utils/custom_text_styles.dart';
 import 'package:stay_job_vendor/utils/image_path.dart';
 import 'package:stay_job_vendor/view/dashboard/activity_listing_screen.dart';
+import 'package:stay_job_vendor/view/employer_dashboard/employer_post_screen.dart';
 import 'package:stay_job_vendor/widgets/home_screen_widget/message_card.dart';
 import 'package:stay_job_vendor/widgets/home_screen_widget/stat_card.dart';
 import 'package:stay_job_vendor/widgets/employer_homescreen_widget/job_card.dart';
@@ -294,7 +295,7 @@ class EmployerHomeScreen extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () {
-                        Get.to(() => ());
+                        Get.to(() => EmployerPostScreen());
                       },
                       child: Row(
                         children: [
