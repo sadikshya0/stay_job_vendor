@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:get/utils.dart';
 import 'package:stay_job_vendor/utils/colors.dart';
 import 'package:stay_job_vendor/utils/custom_text_styles.dart';
 import 'package:stay_job_vendor/utils/image_path.dart';
+import 'package:stay_job_vendor/view/dashboard/post_screen.dart';
 import 'package:stay_job_vendor/widgets/custom/custom_textfield.dart';
 import 'package:stay_job_vendor/widgets/home_screen_widget/property_card.dart';
 
@@ -53,9 +56,24 @@ class ActivityListingScreen extends StatelessWidget {
                   expiryDate: "4/15/2026",
                   availableDate: "4/29/2026",
                 ),
+                SizedBox(height: 50),
               ],
             ),
           ),
+        ),
+      ),
+      floatingActionButton: InkWell(
+        onTap: () {
+          Get.to(() => PostScreen());
+        },
+        child: Container(
+          height: 50,
+          width: 50,
+          decoration: BoxDecoration(
+            color: AppColors.primaryColor,
+            borderRadius: BorderRadius.circular(15),
+          ),
+          child: Icon(Icons.add, color: AppColors.whiteColor, size: 30),
         ),
       ),
     );
