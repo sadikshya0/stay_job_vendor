@@ -24,7 +24,7 @@ class ProfileCard extends StatelessWidget {
     required this.iconColor,
     this.textColor,
     this.borderColor,
-    this.height = 50,
+    this.height = 60,
   });
 
   @override

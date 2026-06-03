@@ -5,7 +5,9 @@ import 'package:stay_job_vendor/utils/colors.dart';
 import 'package:stay_job_vendor/utils/custom_text_styles.dart';
 import 'package:stay_job_vendor/utils/image_path.dart';
 import 'package:stay_job_vendor/view/auth/login_screen.dart';
+import 'package:stay_job_vendor/view/dashboard/about_screen.dart';
 import 'package:stay_job_vendor/view/dashboard/edit_profile_screen.dart';
+import 'package:stay_job_vendor/view/dashboard/privacy_screen.dart';
 import 'package:stay_job_vendor/widgets/profile_widget/profile_card.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -286,7 +288,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
 
-                SizedBox(height: 30),
+                SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -348,10 +350,10 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 40),
+                SizedBox(height: 30),
                 InkWell(
                   onTap: () {
-                    Get.to(() => ());
+                    Get.to(() => PrivacyScreen());
                   },
                   child: ProfileCard(
                     leadingIcon: Icons.lock,
@@ -374,7 +376,7 @@ class ProfileScreen extends StatelessWidget {
 
                 InkWell(
                   onTap: () {
-                    Get.to(() => ());
+                    Get.to(() => AboutScreen());
                   },
                   child: ProfileCard(
                     leadingIcon: Icons.info,

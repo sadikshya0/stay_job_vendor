@@ -6,6 +6,8 @@ import 'package:stay_job_vendor/utils/custom_text_styles.dart';
 import 'package:stay_job_vendor/utils/image_path.dart';
 import 'package:stay_job_vendor/view/auth/login_screen.dart';
 import 'package:stay_job_vendor/view/dashboard/edit_profile_screen.dart';
+import 'package:stay_job_vendor/view/employer_dashboard/employer_about_screen.dart';
+import 'package:stay_job_vendor/view/employer_dashboard/employer_privacy_screen.dart';
 import 'package:stay_job_vendor/widgets/profile_widget/profile_card.dart';
 
 class EmployerProfileScreen extends StatelessWidget {
@@ -353,7 +355,7 @@ class EmployerProfileScreen extends StatelessWidget {
                 SizedBox(height: 40),
                 InkWell(
                   onTap: () {
-                    Get.to(() => ());
+                    Get.to(() => EmployerPrivacyScreen());
                   },
                   child: ProfileCard(
                     leadingIcon: Icons.lock,
@@ -361,22 +363,12 @@ class EmployerProfileScreen extends StatelessWidget {
                     iconColor: Colors.amber,
                   ),
                 ),
-                SizedBox(height: 15),
-                InkWell(
-                  onTap: () {
-                    Get.to(() => ());
-                  },
-                  child: ProfileCard(
-                    leadingIcon: Icons.payment_rounded,
-                    title: "Transaction History",
-                    iconColor: Colors.amber,
-                  ),
-                ),
+
                 SizedBox(height: 15),
 
                 InkWell(
                   onTap: () {
-                    Get.to(() => ());
+                    Get.to(() => EmployerAboutScreen());
                   },
                   child: ProfileCard(
                     leadingIcon: Icons.info,
