@@ -4,7 +4,7 @@ class AppColors {
   static const Color primaryColor = Color(0xFF091859);
   static const Color secondaryColor = Color(0xFF948FE4);
   static const Color whiteColor = Color(0xFFFFFFFF);
-  static const Color lGrey = Color(0xFFEEEFF1);
+  static const Color lGrey = Color(0xFFE3E5E8);
   static const Color textColor = Color(0xFF000000);
   static const Color secondaryTextColor = Color(0xFF64748B);
   static const Color errorColor = Color(0xFFB00020);
@@ -18,6 +18,6 @@ class AppColors {
   static const Color lOrange = Color(0xFFEB8181);
   static const Color orange = Color(0xFFFF5722);
   static const Color lgreen = Color(0xFFC1F4CB);
-  static const Color green = Color(0xFF0E760E);
+  static const Color green = Color(0xFF0E7600);
   // static const Color yellow =
 }

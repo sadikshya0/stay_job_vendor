@@ -9,6 +9,7 @@ import 'package:stay_job_vendor/view/dashboard/about_screen.dart';
 import 'package:stay_job_vendor/view/dashboard/edit_profile_screen.dart';
 import 'package:stay_job_vendor/view/dashboard/privacy_screen.dart';
 import 'package:stay_job_vendor/view/dashboard/report_screen.dart';
+import 'package:stay_job_vendor/view/dashboard/transaction_screen.dart';
 import 'package:stay_job_vendor/widgets/profile_widget/profile_card.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -365,7 +366,7 @@ class ProfileScreen extends StatelessWidget {
                 SizedBox(height: 15),
                 InkWell(
                   onTap: () {
-                    Get.to(() => ());
+                    Get.to(() => TransactionScreen());
                   },
                   child: ProfileCard(
                     leadingIcon: Icons.payment_rounded,
