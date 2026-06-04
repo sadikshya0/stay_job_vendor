@@ -8,6 +8,7 @@ import 'package:stay_job_vendor/view/auth/login_screen.dart';
 import 'package:stay_job_vendor/view/dashboard/about_screen.dart';
 import 'package:stay_job_vendor/view/dashboard/edit_profile_screen.dart';
 import 'package:stay_job_vendor/view/dashboard/privacy_screen.dart';
+import 'package:stay_job_vendor/view/dashboard/report_screen.dart';
 import 'package:stay_job_vendor/widgets/profile_widget/profile_card.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -388,7 +389,7 @@ class ProfileScreen extends StatelessWidget {
 
                 InkWell(
                   onTap: () {
-                    Get.to(() => ());
+                    Get.to(() => ReportScreen());
                   },
                   child: ProfileCard(
                     leadingIcon: Icons.report_off,

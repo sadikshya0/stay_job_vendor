@@ -1,16 +1,15 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:stay_job_vendor/controller/dashboard/report_screen_controller.dart';
+import 'package:stay_job_vendor/controller/employer_dashboard/employer_report_screen_controller.dart';
 import 'package:stay_job_vendor/utils/colors.dart';
 import 'package:stay_job_vendor/utils/custom_text_styles.dart';
-import 'package:stay_job_vendor/view/dashboard/profile_screen.dart';
 import 'package:stay_job_vendor/widgets/profile_widget/issue_tag.dart';
 
-class ReportScreen extends StatelessWidget {
-  final controller = Get.put(ReportScreenController());
+class EmployerReportScreen extends StatelessWidget {
+  final controller = Get.put(EmployerReportScreenController());
 
-  ReportScreen({super.key});
+  EmployerReportScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
